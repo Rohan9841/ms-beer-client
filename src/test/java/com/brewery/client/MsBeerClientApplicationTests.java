@@ -1,4 +1,4 @@
-package com.beer.client;
+package com.brewery.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

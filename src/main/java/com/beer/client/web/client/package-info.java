@@ -1,1 +1,0 @@
-package com.beer.client.web.client;

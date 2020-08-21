@@ -1,4 +1,4 @@
-package com.beer.client.web.client;
+package com.brewery.client.web.client;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -9,36 +9,37 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.beer.client.web.model.BeerDto;
+import com.brewery.client.web.model.BeerDto;
 
 @SpringBootTest
-class BeerClientTest {
+class CustomerClientTest {
 
-	@Autowired
+	@Autowired 
 	BeerClient beerClient;
 	
 	@Test
-	void testGetBeerById() {
+	void testGetCustomerById() {
 		BeerDto beerDto = beerClient.getBeerById(UUID.randomUUID());
 		assertNotNull(beerDto);
 	}
 
 	@Test
-	void testSaveNewBeer() {
-		BeerDto beerDto = BeerDto.builder().beerName("New Beer").build();
+	void testSaveNewCustomer() {
+		BeerDto beerDto = BeerDto.builder().beerName("Test Beer").build();
 		URI uri = beerClient.saveNewBeer(beerDto);
 		assertNotNull(uri);
-		System.out.println(uri.toString());
 	}
-	
+
 	@Test
-	void testUpdateBeer() {
-		BeerDto beerDto = BeerDto.builder().beerName("New name").build();
-		beerClient.updateBeer(UUID.randomUUID(), beerDto);
+	void testUpdateCustomer() {
+		BeerDto beerDto = BeerDto.builder().beerName("Edit test Beer").build();
+		UUID uuid = UUID.randomUUID();
+		beerClient.updateBeer(uuid, beerDto);
 	}
-	
+
 	@Test
-	void testDeleteBeer() {
+	void testDeleteCustomer() {
 		beerClient.deleteBeer(UUID.randomUUID());
 	}
+
 }

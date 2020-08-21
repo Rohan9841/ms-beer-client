@@ -1,4 +1,4 @@
-package com.beer.client.web.client;
+package com.brewery.client.web.client;
 
 import java.net.URI;
 import java.util.UUID;
@@ -8,7 +8,7 @@ import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.beer.client.web.model.BeerDto;
+import com.brewery.client.web.model.BeerDto;
 
 import lombok.Data;
 
