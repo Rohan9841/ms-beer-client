@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class BeerDto {
-
 	UUID id;
 	String beerName;
 	String beerStyle;
